@@ -28,6 +28,16 @@
         }
     })
 
+    $("#number-attending").change(function() {
+        console.log($("#number-attending").val())
+        if ($("#number-attending").val() > 1) {
+            $("#hidden-extra").show("fast")
+        }
+        else {
+            $("#hidden-extra").hide("fast")
+        }
+    });
+
     // Initialize and Configure Scroll Reveal Animation
     window.sr = ScrollReveal();
     sr.reveal('.sr-icons', {

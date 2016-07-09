@@ -94,6 +94,10 @@
                         <label for="number-attending">Number in Party *</label>
                         <input type="number" value="1" min="0" max="10" class="form-control" id="number-attending">
                     </div>
+                    <div class="form-group" style="display: none;" id="hidden-extra">
+                        <label for="extra-people">Names of extra people attending *</label>
+                        <input type="text" class="form-control" id="extra-people">
+                    </div>
                     <div class="form-group">
                         <label for="diet">Do you have any dietary concerns *</label>
                         <input type="text" class="form-control" id="diet">
@@ -102,16 +106,20 @@
                         <label for="diet">Song request *</label>
                         <input type="text" class="form-control" id="diet">
                     </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio" checked>I will be attending the Ceremony and Reception</label>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked>I will be attending the Ceremony and Reception</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">I will be attending only the Ceremony</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">I will not be attending 😞</label>
+                        </div>
                     </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">I will be attending only the Ceremony</label>
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn btn-primary btn-xl">Send it in!</button>
                     </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">I will not be attending 😞</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-xl">Send it in!</button>
                 </form>
             </div>
         </div>
@@ -119,7 +127,7 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
-
+j
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
@@ -129,7 +137,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/creative.js"></script>
 
 </body>
 
