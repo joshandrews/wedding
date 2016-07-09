@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+
+  {% include nav.html %}
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">Emily + Josh = Gettin' Married</h1>
+                <hr>
+                <p>November 11, 2016 • Fort Langley, BC</p>
+                <a href="#details" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">We're getting married!</h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <div class="ceremony-img sr-icons"></div>
+                        <h3>Ceremony</h3>
+                        <p class="text-muted">&hearts; November 11, 2016<br />3 O'clock in the Afternoon<br />Fort Langley Community Hall &hearts;</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <div class="reception-img sr-icons"></div>
+                        <h3>Reception</h3>
+                        <p class="text-muted">&hearts; November 11, 2016<br />6 O'clock in the Evening<br />Fort Langley Community Hall &hearts;</p>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ourstory">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Story</h2>
+                    <hr class="primary">
+                    <div class="rose-img sr-icons"></div>
+                    <p>Josh and Emily met 5 years ago in their first year at UBC.  Emily was from Prince Rupert BC and Josh had most recently lived in London, England.  Josh always said that before they met he saw Emily through the cafeteria window and it was "love at first sight". They started dating about 3 months after knowing each other. Josh took Emily to the rose garden at UBC on November 26th where they sat in the cold and Josh told me how much I meant to him and asked if they could start dating.</p>
+                    <div class="mountain-img sr-icons"></div>
+                    <p>On June 25, 2016, Josh took Emily to his favourite place in the world. A cabin that his family went to every summer on Kalamalka Lake in Vernon BC. They have been going there every summer since they started dating and have laid on the dock under the stars dreaming about their future together. As many of their friends like to say Josh kind of pulled a "Chandler Bing" on Emily by convincing her a few nights before that a proposal was not happening anytime soon (even though he secretly already had the ring). Emily was very surprised when Josh led her down the cabin stairs to the dock which was lit up with 48 candles. He says he had a speech prepared but as soon as they got out on the dock his emotions were so strong he couldn't say it so he just got down on one knee and asked Emily to be his wife. He told her through tears about how they were going to one day bring their kids to this very spot on the dock at the cabin and tell them their story. It was a very emotional, joyful, and beautiful time.</p>
+                    <div class="ring-img sr-icons"></div>
+                    <p>Josh and Emily enjoy many different "typical" Vancouver activities from running the BMO half marathon (Emily beat him 😜), to hiking, skiing, snowshoeing, and just generally being in the outdoors. When they are at the cabin in Vernon we enjoy water skiing, kayaking and paddle boarding as some of their favourite activities. They also both LOVE coffee and are admittedly both kind of coffee snobs :P. They both enjoy deep theological conversations, and listening to and playing music together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside id="registry" class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Check out our wedding registry here!</h2>
+                <a href="http://thebay.com" class="btn btn-default btn-xl sr-button">The Bay</a>
+            </div>
+        </div>
+    </aside>
+
+    <section id="rsvp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">RSVP!</h2>
+                    <hr class="primary">
+                    <p>Did you get invited to our wedding?  Well then, RSVP here!</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form class="col-md-6 col-md-offset-3" role="form">
+                    <div class="form-group">
+                        <label for="email">Your Name *</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="number-attending">Number in Party *</label>
+                        <input type="number" value="1" min="0" max="10" class="form-control" id="number-attending">
+                    </div>
+                    <div class="form-group">
+                        <label for="diet">Do you have any dietary concerns *</label>
+                        <input type="text" class="form-control" id="diet">
+                    </div>
+                    <div class="form-group">
+                        <label for="diet">Song request *</label>
+                        <input type="text" class="form-control" id="diet">
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio" checked>I will be attending the Ceremony and Reception</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">I will be attending only the Ceremony</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">I will not be attending 😞</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-xl">Send it in!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+</body>
+
+</html>
+
