@@ -29,12 +29,12 @@
     })
 
     $("#number-attending").change(function() {
-        console.log($("#number-attending").val())
+        console.log($("#number-attending").val());
         if ($("#number-attending").val() > 1) {
-            $("#hidden-extra").show("fast")
+            $("#hidden-extra").show("fast");
         }
         else {
-            $("#hidden-extra").hide("fast")
+            $("#hidden-extra").hide("fast");
         }
     });
 
@@ -68,6 +68,56 @@
         },
         image: {
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+        }
+    });
+
+    $('#rsvp-form').on('submit',function(){
+        var name = encodeURIComponent($('#name').val());
+        var numberAttending = encodeURIComponent($('#number-attending').val());
+        var extraPeople = encodeURIComponent($('#extra-people').val());
+        var diet = encodeURIComponent($('#diet').val());
+        var songRequest = encodeURIComponent($('#song-request').val());
+        var attending = encodeURIComponent($("input:radio[name ='attending']:checked").val());
+
+        var verified = true;
+        console.log("submitted")
+        $('#name').css('border', '0px');
+        $('#number-attending').css('border', '0px');
+        $('#extra-people').css('border', '0px');
+        $('#diet').css('border', '0px');
+
+        if (name == "") {
+            $('#name').css('border', '1px solid red');
+            verified = false;
+        }
+        if (numberAttending == "") {
+            $('#number-attending').css('border', '1px solid red');
+            verified = false;
+        }
+        if (numberAttending > 1 && extraPeople == "") {
+          $('#extra-people').css('border', '1px solid red');
+          verified = false;
+        }
+        if (diet == "") {
+            $('#diet').css('border', '1px solid red');
+            verified = false;
+        }
+
+        if (verified)
+        {
+          var entry1 = "entry.1616646688";
+          var entry2 = "entry.1293441340";
+          var entry3 = "entry.1429754596";
+          var entry4 = "entry.1643413616";
+          var entry5 = "entry.1857851960";
+          var entry6 = "entry.1154666148";
+          var baseURL = 'https://docs.google.com/forms/d/1jrTgZAWyLR7X7NEuz1fn7Ve9b5GHyADwYugvg-e5odg/formResponse?';
+          var submitRef = '&submit=Submit';
+          var submitURL = (baseURL + entry1 + "=" + name + "&" + entry2 + "=" + numberAttending + "&" + entry3 + "=" + extraPeople + "&" + entry4 + "=" + diet + "&" + entry5 + "=" + songRequest + "&" + entry6 + "=" + attending + submitRef);
+          console.log(submitURL);
+          $("#rsvp-form").attr("action", submitURL);
+          // $('#input-feedback').text("You're all good to go!  We will get back to you 😀.");
+          // $('#input-feedback').show( "fast" );
         }
     });
 
