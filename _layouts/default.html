@@ -87,11 +87,11 @@
             <div class="row">
                 <form class="col-md-6 col-md-offset-3" id="rsvp-form" method="POST" action="" target="no-target">
                     <div class="form-group">
-                        <label for="name">Your Name *</label>
+                        <label for="name">Your name *</label>
                         <input type="text" class="form-control" id="name">
                     </div>
                     <div class="form-group">
-                        <label for="number-attending">Number in Party *</label>
+                        <label for="number-attending">Number in party *</label>
                         <input type="number" value="1" min="0" max="10" class="form-control" id="number-attending">
                     </div>
                     <div class="form-group" style="display: none;" id="hidden-extra">
@@ -99,11 +99,11 @@
                         <input type="text" class="form-control" id="extra-people">
                     </div>
                     <div class="form-group">
-                        <label for="diet">Do you have any dietary concerns *</label>
+                        <label for="diet">Do you have any dietary concerns</label>
                         <input type="text" class="form-control" id="diet">
                     </div>
                     <div class="form-group">
-                        <label for="song-request">Song request *</label>
+                        <label for="song-request">Song request</label>
                         <input type="text" class="form-control" id="song-request">
                     </div>
                     <div class="form-group">
@@ -125,11 +125,18 @@
                 </form>
             </div>
         </div>
+        <div class="container" id="successful-form-response" style="display: none;">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <p>Awesome! We got your response! 😄</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
-j
+
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
@@ -140,6 +147,9 @@ j
 
     <!-- Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <!-- This is to hide the Google Forms Response -->
+    <iframe src="#" id="no-target" name="no-target" style="display:none"></iframe>
 
 </body>
 

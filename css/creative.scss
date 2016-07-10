@@ -406,6 +406,8 @@ header {
     text-transform: uppercase;
 }
 
+.btn:focus {outline:0;}
+
 .btn-xl {
     padding: 15px 30px;
 }

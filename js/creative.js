@@ -81,10 +81,9 @@
 
         var verified = true;
         console.log("submitted")
-        $('#name').css('border', '0px');
-        $('#number-attending').css('border', '0px');
-        $('#extra-people').css('border', '0px');
-        $('#diet').css('border', '0px');
+        $('#name').css('border', '1px solid #ccc');
+        $('#number-attending').css('border', '1px solid #ccc');
+        $('#extra-people').css('border', '1px solid #ccc');
 
         if (name == "") {
             $('#name').css('border', '1px solid red');
@@ -97,10 +96,6 @@
         if (numberAttending > 1 && extraPeople == "") {
           $('#extra-people').css('border', '1px solid red');
           verified = false;
-        }
-        if (diet == "") {
-            $('#diet').css('border', '1px solid red');
-            verified = false;
         }
 
         if (verified)
@@ -116,8 +111,11 @@
           var submitURL = (baseURL + entry1 + "=" + name + "&" + entry2 + "=" + numberAttending + "&" + entry3 + "=" + extraPeople + "&" + entry4 + "=" + diet + "&" + entry5 + "=" + songRequest + "&" + entry6 + "=" + attending + submitRef);
           console.log(submitURL);
           $("#rsvp-form").attr("action", submitURL);
-          // $('#input-feedback').text("You're all good to go!  We will get back to you 😀.");
-          // $('#input-feedback').show( "fast" );
+          $('#successful-form-response').slideDown( "slow" );
+        }
+        else
+        {
+            return false;
         }
     });
 
